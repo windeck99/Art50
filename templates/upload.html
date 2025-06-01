@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Upload
+{% endblock %}
+
+{% block main %}
+    <div>Upload your piece of <span class="lightblue">art</span>.</div>
+    <form action="/upload" method="post" style="margin-top: 3rem" enctype="multipart/form-data">
+        <div>
+            <input type="file" name="picture" accept="image/png, image/jpeg">
+        </div>
+        <div style="margin-top: 2rem">
+            <button class="btn btn-primary" type="Submit">Upload</button>
+        </div>
+    </form>
+{% endblock %}

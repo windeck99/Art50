@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Upload
+{% endblock %}
+
+{% block main %}
+    <div><span class="amber">Enjoy</span> the <span class="lightblue">art</span></div>
+    <hr>
+    {% for photo in photos %}
+    <section>
+        <div class="one"><img src="data:image/jpeg;base64,{{ photo['image'] }}" style="max-width: 30rem; max-height: 30rem;"></div>
+        <div class="two">
+            <div style="font-weight: bold;">User: {{ photo["username"] }}</div>
+            <div>Date: {{ photo["date"] }}</div>
+            <div>Time: {{ photo["time"] }}</div>
+        </div>
+    </section>
+    {% endfor %}
+{% endblock %}

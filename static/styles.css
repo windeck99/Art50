@@ -1,0 +1,89 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+
+nav .navbar-brand .lightblue
+{
+    color: #42e6f5;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .amber
+{
+    color: #f5aa42;
+}
+
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+div {
+    color: #CCCCCC;
+}
+
+table {
+    width: 50%; /* Adjust width for better visibility */
+    border-collapse: collapse; /* Collapses borders so they don't double up */
+    margin: 0 auto; /* Centers the table on the page */
+}
+th, td {
+    border: 2px solid black; /* Adds a border around each cell */
+    padding: 10px; /* Adds padding inside each cell */
+    text-align: left; /* Aligns text to the left inside the cell */
+    vertical-align: middle; /* Vertically centers the text inside the cell */
+}
+
+body {
+    color: #CCCCCC;
+}
+
+.lightblue {
+    color: #42e6f5;
+}
+.amber {
+    color: #f5aa42;
+}
+
+.navbartext {
+    color: #CCCCCC;
+}
+.navbarcolor {
+    background-color: #2A2A2A;
+}
+
+.container {
+    margin-top: 1.5rem;
+    width: 80%;
+    height: 33rem;
+    margin: auto;
+    padding: 1rem;
+  }
+
+  .one {
+    width: 60%;
+    height: 33rem;
+    float: left;
+  }
+
+  .two {
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15%;
+    height: 33rem;
+  }

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Upload
+{% endblock %}
+
+{% block main %}
+    <div>Your <span class="lightblue">art</span> in one place.</div>
+    <hr>
+    {% for photo in photos %}
+    <section>
+        <div class="one"><img src="data:image/jpeg;base64,{{ photo['image'] }}" style="max-width: 30rem; max-height: 30rem;"></div>
+        <div class="two">
+            <div>Date: {{ photo["date"] }}</div>
+            <div>Time: {{ photo["time"] }}</div>
+            <div>Published: {{ photo["is_public"] | capitalize}}</div>
+            <form action="/gallery" style="margin-top: 0.5rem; display: inline;" method="post">
+                <button id="bttn_toggle_upload_{{ photo['photo_id'] }}" class="btn btn-primary" name="photo_id" type="Submit" value="{{photo['photo_id']}}"></button>
+            </form>
+            <form action="/delete" style="margin-top: 0.5rem; display: inline;" method="post">
+                <button class="btn btn-primary" name="photo_id" type="Submit" value="{{photo['photo_id']}}">Delete</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        const button_{{ photo['photo_id'] }} = document.getElementById("bttn_toggle_upload_{{ photo['photo_id'] }}")
+        {% if photo['is_public'] == 'yes' %}
+            button_{{ photo['photo_id'] }}.textContent = "Take Down";
+        {% else %}
+            button_{{ photo['photo_id'] }}.textContent = "Publish";
+        {% endif %}
+    </script>
+    {% endfor %}
+{% endblock %}
